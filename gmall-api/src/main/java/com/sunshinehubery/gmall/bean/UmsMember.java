@@ -3,6 +3,7 @@ package com.sunshinehubery.gmall.bean;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Date;
  * @date: 2019/9/1 12:32
  * @Version: 1.0
  **/
-public class UmsMember {
+public class UmsMember implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;

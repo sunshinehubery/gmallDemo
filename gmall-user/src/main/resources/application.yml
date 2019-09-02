@@ -8,4 +8,4 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   configuration:
-    map-underscore-to-camel-case: true      #表示指带有下划线的表字段映射为驼峰命名法
+    map-underscore-to-camel-case: true #表示指带有下划线的表字段映射为驼峰命名法
