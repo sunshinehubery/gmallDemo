@@ -9,3 +9,9 @@ gmall-user-service:port-8070,web后端（provider），服务名称user-service
 gmall-user-web:port-8080,web前端（consumer），服务名称user-web  
 gmall-manage-service:port-8071,服务名称manage-service  
 gmall-manage-web:port-8081,服务名称manage-web  
+fastfds整合spring boot  
+先从github上下载fastdfs-client-java  
+git clone https://github.com/happyfish100/fastdfs-client-java  
+导入Maven，将fdfs的客户端打包到本地的maven仓库  
+最后将整合到需要的子项目中  
+
