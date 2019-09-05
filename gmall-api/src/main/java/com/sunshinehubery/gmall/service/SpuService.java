@@ -1,7 +1,9 @@
 package com.sunshinehubery.gmall.service;
 
 import com.sunshinehubery.gmall.bean.PmsBaseSaleAttr;
+import com.sunshinehubery.gmall.bean.PmsProductImage;
 import com.sunshinehubery.gmall.bean.PmsProductInfo;
+import com.sunshinehubery.gmall.bean.PmsProductSaleAttr;
 
 import java.util.List;
 
@@ -17,4 +19,8 @@ public interface SpuService {
     List<PmsBaseSaleAttr> baseSaleAttrList();
 
     void saveSpuInfo(PmsProductInfo pmsProductInfo);
+
+    List<PmsProductSaleAttr> spuSaleAttrList(String spuId);
+
+    List<PmsProductImage> spuImageList(String spuId);
 }

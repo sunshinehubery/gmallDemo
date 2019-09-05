@@ -2,7 +2,9 @@ package com.sunshinehubery.gmall.manage.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.sunshinehubery.gmall.bean.PmsBaseSaleAttr;
+import com.sunshinehubery.gmall.bean.PmsProductImage;
 import com.sunshinehubery.gmall.bean.PmsProductInfo;
+import com.sunshinehubery.gmall.bean.PmsProductSaleAttr;
 import com.sunshinehubery.gmall.manage.utils.PmsUploadUtil;
 import com.sunshinehubery.gmall.service.SpuService;
 import org.springframework.stereotype.Controller;
@@ -50,5 +52,19 @@ public class SpuController {
         //通过PmsUploadUtil将图片上传到fastfds
         String url = PmsUploadUtil.uploadImage(multipartFile);
         return url;
+    }
+
+    @RequestMapping("/spuSaleAttrList")
+    @ResponseBody
+    public List<PmsProductSaleAttr> spuSaleAttrList(String spuId){
+        List<PmsProductSaleAttr> pmsProductSaleAttrs = spuService.spuSaleAttrList(spuId);
+        return pmsProductSaleAttrs;
+    }
+
+    @RequestMapping("/spuImageList")
+    @ResponseBody
+    public List<PmsProductImage> spuImageList(String spuId){
+        List<PmsProductImage> pmsProductImages = spuService.spuImageList(spuId);
+        return pmsProductImages;
     }
 }
