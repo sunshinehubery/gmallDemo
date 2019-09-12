@@ -1,7 +1,10 @@
 package com.sunshinehubery.gmall.manage.mapper;
 
 import com.sunshinehubery.gmall.bean.PmsSkuInfo;
+import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.Mapper;
+
+import java.util.List;
 
 /**
  * @description:
@@ -10,4 +13,5 @@ import tk.mybatis.mapper.common.Mapper;
  * @Version: 1.0
  **/
 public interface SkuMapper extends Mapper<PmsSkuInfo> {
+    List<PmsSkuInfo> selectSkuInfoList(@Param("productId") String productId);
 }

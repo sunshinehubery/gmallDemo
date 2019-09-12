@@ -2,6 +2,8 @@ package com.sunshinehubery.gmall.service;
 
 import com.sunshinehubery.gmall.bean.PmsSkuInfo;
 
+import java.util.List;
+
 /**
  * @description:
  * @author: sunshinehubery
@@ -10,4 +12,8 @@ import com.sunshinehubery.gmall.bean.PmsSkuInfo;
  **/
 public interface SkuService {
     void saveSkuInfo(PmsSkuInfo pmsSkuInfo);
+
+    PmsSkuInfo getItemBySkuId(String skuId);
+
+    List<PmsSkuInfo> getSkuInfoList(String productId);
 }
