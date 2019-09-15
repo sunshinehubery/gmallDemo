@@ -1,4 +1,4 @@
-package com.sunshinehubery.gmall.manage;
+package com.sunshinehubery.gmall;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
